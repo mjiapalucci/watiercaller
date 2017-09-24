@@ -16,7 +16,7 @@ class DBHelper:
 
 	def add_table(self, number, owner):
 		new_id = self.db.tables.insert({'number': number, 'owner': owner})
-		retrun new_id
+		return new_id
 
 	def update_table(self, _id, url):
 		self.db.tables.update({'_id': _id}, {'$set': {'url': url}})
